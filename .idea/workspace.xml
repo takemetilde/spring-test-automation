@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1e67d282-4418-4b75-b9d6-cf6d35efe290" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1a2GneRxU33raGVALMYhHx4wry5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bddreflections" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="settings.saveactions" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e67d282-4418-4b75-b9d6-cf6d35efe290" name="Default Changelist" comment="" />
+      <created>1585926443658</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585926443658</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="596" y="215" width="800" height="684" key="#Plugins" timestamp="1585926877704">
+      <screen x="83" y="27" width="1837" height="1053" />
+    </state>
+    <state x="596" y="215" width="800" height="684" key="#Plugins/83.27.1837.1053@83.27.1837.1053" timestamp="1585926877704" />
+    <state x="2409" y="257" width="374" height="599" key="#com.intellij.ide.util.MemberChooser" timestamp="1585945557602">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2409" y="257" width="374" height="599" key="#com.intellij.ide.util.MemberChooser/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1585945557602" />
+    <state x="2376" y="311" key="FileChooserDialogImpl" timestamp="1585961446425">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2376" y="311" key="FileChooserDialogImpl/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1585961446425" />
+    <state x="2084" y="131" width="1024" height="852" key="SettingsEditor" timestamp="1585936514273">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2084" y="131" width="1024" height="852" key="SettingsEditor/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1585936514273" />
+    <state x="2207" y="238" width="704" height="696" key="search.everywhere.popup" timestamp="1585961619851">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2207" y="238" width="704" height="696" key="search.everywhere.popup/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1585961619851" />
+    <state x="664" y="259" width="673" height="678" key="search.everywhere.popup/83.27.1837.1053@83.27.1837.1053" timestamp="1585926862805" />
+  </component>
+</project>

@@ -1,0 +1,9 @@
+spring:
+  profiles: test
+
+ui:
+  webdriver:
+    type: chrome
+    version: 80.0.3987.106
+
+api:
