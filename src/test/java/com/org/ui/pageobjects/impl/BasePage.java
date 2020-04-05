@@ -1,6 +1,8 @@
 package com.org.ui.pageobjects.impl;
 
+import com.org.ui.PageObject;
 import com.org.ui.UITestBase;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,11 +12,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 
+import java.net.URI;
 import java.util.List;
 
+@PageObject
 public class BasePage {
 
     private static final int WAIT_TIMEOUT = 10;
+
     @Autowired
     UITestBase base;
 
@@ -42,16 +47,20 @@ public class BasePage {
         return UITestBase.getWebDriver();
     }
 
-    protected Boolean isElementDisplayed(By selector) {
+    public void navigateToPage(URI url) {
+        getDriver().get(url.toString());
+    }
+
+    public Boolean isElementDisplayed(By selector) {
         return findElement(selector).isDisplayed();
     }
 
-    protected String getElementText(By selector) {
+    public String getElementText(By selector) {
         return StringUtils.trimWhitespace(findElement(selector).getText());
     }
 
-    public void selectRadioButtonByValue(By radioGroup, String valueToSelect) {
-        List<WebElement> radioLabels = getDriver().findElements(radioGroup);
+    public void selectRadioButtonByValue(WebElement radioGroup, String valueToSelect) {
+        List<WebElement> radioLabels = radioGroup.findElements(By.tagName(""));
         String trim = StringUtils.trimWhitespace(valueToSelect);
         for (WebElement radioLabel : radioLabels) {
             if (StringUtils.trimWhitespace(radioLabel.getText()).equalsIgnoreCase(trim)) {
@@ -61,15 +70,16 @@ public class BasePage {
         }
     }
 
-    public void selectItemInDropDown(By dropDownList, String itemToSelect) {
-        WebElement dropDownElement = findElement(dropDownList);
+    public void selectItemInDropDown(WebElement dropDownElement, String itemToSelect) {
         List<WebElement> options = dropDownElement.findElements(By.tagName("li"));
-        String toUpperCase = itemToSelect.toUpperCase();
         for (WebElement option : options) {
-            if (option.getText().toUpperCase().contains(toUpperCase)) {
+            if (option.getText().contains(itemToSelect)) {
                 option.click();
                 break;
+            } else {
+                Assert.fail("No items in dropdown exist that match: " + itemToSelect);
             }
         }
     }
+
 }

@@ -16,4 +16,16 @@ public class TravelHomePage extends BasePage {
     @FindBy(className = "btn btn-primary")
     private WebElement findFlightsButton;
 
+    public WebElement getDepartureCityDropDown() {
+        return departureCityDropDown;
+    }
+
+    public WebElement getDestinationCityDropDown() {
+        return destinationCityDropDown;
+    }
+
+    public WebElement getFindFlightsButton() {
+        return findFlightsButton;
+    }
+
 }

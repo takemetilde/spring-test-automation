@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e67d282-4418-4b75-b9d6-cf6d35efe290" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/org/cucumber/CucumberRunnerIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/org/cucumber/steps/UIBaseSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/org/cucumber/steps/UITravelHomePageSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/context/CucumberTestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/context/CucumberSpringContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/context/UIIntegrationTestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/context/UIIntegrationTestContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/cucumber/CucumberRunnerIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/TravelHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/TravelHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UITest.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +47,57 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bddreflections" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GTRI_Assessment" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="settings.saveactions" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RunManager" selected="Cucumber java.Scenario: Sequential Execution, Open BlazeDemo site">
+    <configuration name="Scenario: Select departure/destination city from the Home Page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/UITest.feature" />
+      <option name="GLUE" value="com.org.context cucumber.api.spring com.org.cucumber.steps" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="spring-test-automation" />
+      <option name="NAME_FILTER" value="^Select departure\/destination city from the Home Page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Select departure\/destination city from the Home Page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Select departure/destination city from the Home Page" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Sequential Execution, Open BlazeDemo site" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/UITest.feature" />
+      <option name="GLUE" value="com.org.context cucumber.api.spring com.org.cucumber.steps" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="spring-test-automation" />
+      <option name="NAME_FILTER" value="^Sequential Execution\, Open BlazeDemo site$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Sequential Execution\, Open BlazeDemo site$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Sequential Execution, Open BlazeDemo site" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber java.Scenario: Sequential Execution, Open BlazeDemo site" />
+        <item itemvalue="Cucumber java.Scenario: Select departure/destination city from the Home Page" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -59,26 +113,78 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="596" y="215" width="800" height="684" key="#Plugins" timestamp="1585926877704">
-      <screen x="83" y="27" width="1837" height="1053" />
+    <state x="2136" y="193" width="800" height="684" key="#Plugins" timestamp="1586034232784">
+      <screen x="1600" y="0" width="1920" height="1080" />
     </state>
+    <state x="2136" y="193" key="#Plugins/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586034232784" />
     <state x="596" y="215" width="800" height="684" key="#Plugins/83.27.1837.1053@83.27.1837.1053" timestamp="1585926877704" />
-    <state x="2409" y="257" width="374" height="599" key="#com.intellij.ide.util.MemberChooser" timestamp="1585945557602">
+    <state x="2059" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586038481465">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2409" y="257" width="374" height="599" key="#com.intellij.ide.util.MemberChooser/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1585945557602" />
-    <state x="2376" y="311" key="FileChooserDialogImpl" timestamp="1585961446425">
+    <state x="2059" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586038481465" />
+    <state x="2409" y="257" width="374" height="599" key="#com.intellij.ide.util.MemberChooser" timestamp="1586035608549">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2376" y="311" key="FileChooserDialogImpl/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1585961446425" />
-    <state x="2084" y="131" width="1024" height="852" key="SettingsEditor" timestamp="1585936514273">
+    <state x="2409" y="257" width="374" height="599" key="#com.intellij.ide.util.MemberChooser/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586035608549" />
+    <state x="2376" y="311" key="FileChooserDialogImpl" timestamp="1586036856485">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2084" y="131" width="1024" height="852" key="SettingsEditor/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1585936514273" />
-    <state x="2207" y="238" width="704" height="696" key="search.everywhere.popup" timestamp="1585961619851">
+    <state x="2376" y="311" key="FileChooserDialogImpl/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586036856485" />
+    <state width="1787" height="401" key="GridCell.Tab.0.bottom" timestamp="1586045222174">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2207" y="238" width="704" height="696" key="search.everywhere.popup/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1585961619851" />
+    <state width="1787" height="401" key="GridCell.Tab.0.bottom/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586045222174" />
+    <state width="1787" height="401" key="GridCell.Tab.0.center" timestamp="1586045222174">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1787" height="401" key="GridCell.Tab.0.center/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586045222174" />
+    <state width="1787" height="401" key="GridCell.Tab.0.left" timestamp="1586045222173">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1787" height="401" key="GridCell.Tab.0.left/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586045222173" />
+    <state width="1787" height="401" key="GridCell.Tab.0.right" timestamp="1586045222174">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1787" height="401" key="GridCell.Tab.0.right/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586045222174" />
+    <state width="1787" height="454" key="GridCell.Tab.1.bottom" timestamp="1586043807460">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1787" height="454" key="GridCell.Tab.1.bottom/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586043807460" />
+    <state width="1787" height="454" key="GridCell.Tab.1.center" timestamp="1586043807459">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1787" height="454" key="GridCell.Tab.1.center/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586043807459" />
+    <state width="1787" height="454" key="GridCell.Tab.1.left" timestamp="1586043807459">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1787" height="454" key="GridCell.Tab.1.left/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586043807459" />
+    <state width="1787" height="454" key="GridCell.Tab.1.right" timestamp="1586043807460">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1787" height="454" key="GridCell.Tab.1.right/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586043807460" />
+    <state x="1920" y="77" width="1454" height="852" key="SettingsEditor" timestamp="1586036784167">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1920" y="77" width="1454" height="852" key="SettingsEditor/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586036784167" />
+    <state x="2265" y="252" key="run.anything.popup" timestamp="1586034077989">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2265" y="252" key="run.anything.popup/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586034077989" />
+    <state x="2207" y="238" width="704" height="696" key="search.everywhere.popup" timestamp="1586045376913">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2207" y="238" width="704" height="696" key="search.everywhere.popup/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586045376913" />
     <state x="664" y="259" width="673" height="678" key="search.everywhere.popup/83.27.1837.1053@83.27.1837.1053" timestamp="1585926862805" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/org/cucumber/steps/UIBaseSteps.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

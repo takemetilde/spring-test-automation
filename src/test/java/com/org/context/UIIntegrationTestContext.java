@@ -1,9 +1,10 @@
 package com.org.context;
 
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.context.annotation.Configuration;
 
-@ContextConfiguration
+@Configuration
 @ComponentScan(basePackages = "com.org.ui.pageobjects.impl")
 public class UIIntegrationTestContext {
+
 }

@@ -17,11 +17,15 @@ import org.springframework.test.context.ContextConfiguration;
 public class UITestBase {
 
     private static ThreadLocal<WebDriver> threadLocalWebDriver = new ThreadLocal<>();
+
     @Value("ui.webdriver.type")
     String webDriverType;
+
     @Value("ui.webdriver.version")
     String webDriverVersion;
+
     private WebDriver driver;
+
     private Logger logger;
 
     public UITestBase() {
@@ -33,7 +37,8 @@ public class UITestBase {
     }
 
     private WebDriver createWebDriver() {
-        getLogger().info(String.format("Creating webdriver type: %s version: %s", getWebDriverType(), getWebDriverVersion()));
+        getLogger().info(String
+                .format("Creating webdriver type: %s version: %s", getWebDriverType(), getWebDriverVersion()));
 
         switch (webDriverType) {
             case BrowserType.CHROME:
@@ -81,4 +86,5 @@ public class UITestBase {
     public String getWebDriverVersion() {
         return webDriverVersion;
     }
+
 }
