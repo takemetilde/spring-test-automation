@@ -9,15 +9,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 
 import java.net.URI;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 @PageObject
 public class BasePage {
 
     private static final int WAIT_TIMEOUT = 10;
+
+    private URI uri;
+
+    @Autowired
+
 
     public static void handledSleep(long milliseconds) {
         try {
@@ -27,8 +36,20 @@ public class BasePage {
         }
     }
 
+    public URI getUri() {
+        return uri;
+    }
+
+    public void setUri(URI uri) {
+        this.uri = uri;
+    }
+
     protected WebElement findElement(By selector) {
         return findElement(ExpectedConditions.presenceOfElementLocated(selector));
+    }
+
+    protected WebElement findElement(WebElement selector) {
+        return findElement(ExpectedConditions.visibilityOf(selector));
     }
 
     private WebElement findElement(ExpectedCondition<WebElement> expectedCondition) {
@@ -45,6 +66,7 @@ public class BasePage {
 
     public void navigateToPage(URI url) {
         getDriver().get(url.toString());
+        getWebDriverWait().until(ExpectedConditions.jsReturnsValue("return document.readyState=='complete';"));
     }
 
     public Boolean isElementDisplayed(By selector) {
@@ -53,6 +75,21 @@ public class BasePage {
 
     public String getElementText(By selector) {
         return StringUtils.trimWhitespace(findElement(selector).getText());
+    }
+
+    public Boolean isClickable(WebElement element) {
+        try {
+            findElement(ExpectedConditions.elementToBeClickable(element));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void selectButtonByText(WebElement button, String buttonText) {
+        assertTrue("Button is not clickable: " + button.getTagName(), isClickable(button));
+        assertEquals("Button text is incorrect:" + buttonText, button.getText(), buttonText);
+        button.click();
     }
 
     public void selectRadioButtonByValue(WebElement radioGroup, String valueToSelect) {

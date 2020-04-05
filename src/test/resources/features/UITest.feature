@@ -5,9 +5,9 @@ Feature: Book travel on Blazedemo
 
   Scenario: Select departure/destination city from the Home Page
     Given the departure city "Paris" from the dropdown is selected on the Home Page
-#    And the destination city "Buenos Aires" from the dropdown is selected on the Home Page
-#    And the "Find Flights" button is clicked on the Home Page
-#    Then the heading should show "Flight from Paris to Buenos Aires:" on the Reservation Page.
+    And the destination city "Buenos Aires" from the dropdown is selected on the Home Page
+    And the "Find Flights" button is clicked on the Home Page
+    Then the heading should show "Flight from Paris to Buenos Aires:" on the Reservation Page.
 #
 #  Scenario: Select the flight with the appropriate fields
 #    Given the flight is found in the reservation table on the Reservation Page:

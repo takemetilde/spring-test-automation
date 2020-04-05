@@ -14,4 +14,14 @@ public class UITravelHomePageSteps {
         homePage.selectItemInDropDown(homePage.getDepartureCityDropDown(), depCity);
     }
 
+    @Given("^the destination city (.*?) from the dropdown is selected on the Home Page$")
+    public void the_destination_city_from_the_dropdown_is_selected_on_the_home_page(String desCity) {
+        homePage.selectItemInDropDown(homePage.getDestinationCityDropDown(), desCity);
+    }
+
+    @Given("^the (.*?) button is clicked on the Home Page$")
+    public void the_button_is_clicked_on_the_home_page(String buttonText) {
+        homePage.selectButtonByText(homePage.getFindFlightsButton(), buttonText);
+    }
+
 }
