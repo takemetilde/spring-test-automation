@@ -1,8 +1,6 @@
 package com.org.ui;
 
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,10 +15,10 @@ public class UITestBase {
 
     private static ThreadLocal<WebDriver> threadLocalWebDriver = new ThreadLocal<>();
 
-    @Value("ui.webdriver.type")
+    @Value("${ui.webdriver.type}")
     String webDriverType;
 
-    @Value("ui.webdriver.version")
+    @Value("${ui.webdriver.version}")
     String webDriverVersion;
 
     private WebDriver driver;
@@ -56,18 +54,6 @@ public class UITestBase {
             driver = createWebDriver();
             threadLocalWebDriver.set(driver);
         }
-    }
-
-    @Before
-    public void beforeUI() {
-        getLogger().info("Initializing webdriver...");
-        initiateWebDriver();
-    }
-
-    @After
-    public void afterUI() {
-        getLogger().info("Tearing down webdriver...");
-        getDriver().quit();
     }
 
     public String getWebDriverType() {

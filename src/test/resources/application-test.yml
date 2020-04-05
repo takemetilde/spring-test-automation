@@ -1,6 +1,5 @@
 spring:
   profiles: test
-
 ui:
   webdriver:
     type: chrome
