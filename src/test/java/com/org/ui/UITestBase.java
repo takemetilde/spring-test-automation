@@ -1,6 +1,5 @@
 package com.org.ui;
 
-import com.org.context.UIIntegrationTestContext;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -11,9 +10,9 @@ import org.openqa.selenium.remote.BrowserType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.stereotype.Component;
 
-@ContextConfiguration(classes = UIIntegrationTestContext.class)
+@Component
 public class UITestBase {
 
     private static ThreadLocal<WebDriver> threadLocalWebDriver = new ThreadLocal<>();

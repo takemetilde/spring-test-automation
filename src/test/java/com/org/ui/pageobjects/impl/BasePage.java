@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 
 import java.net.URI;
@@ -19,9 +18,6 @@ import java.util.List;
 public class BasePage {
 
     private static final int WAIT_TIMEOUT = 10;
-
-    @Autowired
-    UITestBase base;
 
     public static void handledSleep(long milliseconds) {
         try {

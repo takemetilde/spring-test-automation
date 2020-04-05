@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e67d282-4418-4b75-b9d6-cf6d35efe290" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/org/cucumber/CucumberRunnerIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/org/cucumber/steps/UIBaseSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/org/cucumber/steps/UITravelHomePageSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/context/CucumberTestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/context/CucumberSpringContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/context/UIIntegrationTestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/context/UIIntegrationTestContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/cucumber/CucumberRunnerIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/ui/UITestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/ui/UITestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/TravelHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/TravelHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UITest.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,38 +122,38 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2376" y="311" key="FileChooserDialogImpl/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586036856485" />
-    <state width="1787" height="401" key="GridCell.Tab.0.bottom" timestamp="1586045222174">
+    <state width="1787" height="301" key="GridCell.Tab.0.bottom" timestamp="1586047336986">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state width="1787" height="401" key="GridCell.Tab.0.bottom/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586045222174" />
-    <state width="1787" height="401" key="GridCell.Tab.0.center" timestamp="1586045222174">
+    <state width="1787" height="301" key="GridCell.Tab.0.bottom/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586047336986" />
+    <state width="1787" height="301" key="GridCell.Tab.0.center" timestamp="1586047336986">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state width="1787" height="401" key="GridCell.Tab.0.center/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586045222174" />
-    <state width="1787" height="401" key="GridCell.Tab.0.left" timestamp="1586045222173">
+    <state width="1787" height="301" key="GridCell.Tab.0.center/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586047336986" />
+    <state width="1787" height="301" key="GridCell.Tab.0.left" timestamp="1586047336985">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state width="1787" height="401" key="GridCell.Tab.0.left/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586045222173" />
-    <state width="1787" height="401" key="GridCell.Tab.0.right" timestamp="1586045222174">
+    <state width="1787" height="301" key="GridCell.Tab.0.left/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586047336985" />
+    <state width="1787" height="301" key="GridCell.Tab.0.right" timestamp="1586047336986">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state width="1787" height="401" key="GridCell.Tab.0.right/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586045222174" />
-    <state width="1787" height="454" key="GridCell.Tab.1.bottom" timestamp="1586043807460">
+    <state width="1787" height="301" key="GridCell.Tab.0.right/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586047336986" />
+    <state width="1787" height="301" key="GridCell.Tab.1.bottom" timestamp="1586047340052">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state width="1787" height="454" key="GridCell.Tab.1.bottom/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586043807460" />
-    <state width="1787" height="454" key="GridCell.Tab.1.center" timestamp="1586043807459">
+    <state width="1787" height="301" key="GridCell.Tab.1.bottom/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586047340052" />
+    <state width="1787" height="301" key="GridCell.Tab.1.center" timestamp="1586047340052">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state width="1787" height="454" key="GridCell.Tab.1.center/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586043807459" />
-    <state width="1787" height="454" key="GridCell.Tab.1.left" timestamp="1586043807459">
+    <state width="1787" height="301" key="GridCell.Tab.1.center/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586047340052" />
+    <state width="1787" height="301" key="GridCell.Tab.1.left" timestamp="1586047340052">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state width="1787" height="454" key="GridCell.Tab.1.left/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586043807459" />
-    <state width="1787" height="454" key="GridCell.Tab.1.right" timestamp="1586043807460">
+    <state width="1787" height="301" key="GridCell.Tab.1.left/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586047340052" />
+    <state width="1787" height="301" key="GridCell.Tab.1.right" timestamp="1586047340052">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state width="1787" height="454" key="GridCell.Tab.1.right/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586043807460" />
+    <state width="1787" height="301" key="GridCell.Tab.1.right/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586047340052" />
     <state x="1920" y="77" width="1454" height="852" key="SettingsEditor" timestamp="1586036784167">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -183,6 +175,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/org/cucumber/steps/UIBaseSteps.java</url>
           <line>16</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/BasePage.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
