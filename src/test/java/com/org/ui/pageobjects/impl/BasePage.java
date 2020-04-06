@@ -1,6 +1,5 @@
 package com.org.ui.pageobjects.impl;
 
-import com.org.ui.PageInitialization;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +18,7 @@ import java.util.stream.Collectors;
 import static org.junit.Assert.*;
 
 @Component
-public class BasePage implements PageInitialization {
+public class BasePage {
 
     private static final int WAIT_TIMEOUT = 10;
 
@@ -34,10 +33,6 @@ public class BasePage implements PageInitialization {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
-
-    @Override
-    public void initializePage() {
     }
 
     public URI getUri() {

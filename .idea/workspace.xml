@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e67d282-4418-4b75-b9d6-cf6d35efe290" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/org/config/WebDriverConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/org/ui/PageInitialization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/context/CucumberSpringContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/context/CucumberSpringContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/context/UIIntegrationTestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/context/UIIntegrationTestContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/cucumber/steps/UIBaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/cucumber/steps/UIBaseSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/cucumber/steps/UITravelHomePageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/cucumber/steps/UITravelHomePageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/ui/PageObjectBeanPostProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/ui/UITestBase.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/TravelHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/TravelHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application-test.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/UITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UITest.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +14,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -180,10 +170,10 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2265" y="252" key="run.anything.popup/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586124834352" />
-    <state x="2207" y="238" width="704" height="696" key="search.everywhere.popup" timestamp="1586199385055">
+    <state x="2207" y="238" width="704" height="696" key="search.everywhere.popup" timestamp="1586202268982">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2207" y="238" width="704" height="696" key="search.everywhere.popup/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586199385055" />
+    <state x="2207" y="238" width="704" height="696" key="search.everywhere.popup/1600.0.1920.1080/0.180.1600.900@1600.0.1920.1080" timestamp="1586202268982" />
     <state x="664" y="259" width="673" height="678" key="search.everywhere.popup/83.27.1837.1053@83.27.1837.1053" timestamp="1585926862805" />
   </component>
   <component name="XDebuggerManager">
@@ -191,7 +181,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/BasePage.java</url>
-          <line>97</line>
+          <line>98</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
