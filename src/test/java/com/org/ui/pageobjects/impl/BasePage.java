@@ -1,32 +1,32 @@
 package com.org.ui.pageobjects.impl;
 
-import com.org.ui.PageObject;
-import com.org.ui.UITestBase;
-import org.junit.Assert;
+import com.org.ui.PageInitialization;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.net.URI;
 import java.util.List;
+import java.util.stream.Collectors;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
-@PageObject
-public class BasePage {
+@Component
+public class BasePage implements PageInitialization {
 
     private static final int WAIT_TIMEOUT = 10;
 
-    private URI uri;
-
     @Autowired
+    public WebDriver webDriver;
 
+    private URI uri;
 
     public static void handledSleep(long milliseconds) {
         try {
@@ -34,6 +34,10 @@ public class BasePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void initializePage() {
     }
 
     public URI getUri() {
@@ -57,15 +61,11 @@ public class BasePage {
     }
 
     protected WebDriverWait getWebDriverWait() {
-        return new WebDriverWait(getDriver(), WAIT_TIMEOUT);
-    }
-
-    private WebDriver getDriver() {
-        return UITestBase.getWebDriver();
+        return new WebDriverWait(webDriver, WAIT_TIMEOUT);
     }
 
     public void navigateToPage(URI url) {
-        getDriver().get(url.toString());
+        webDriver.get(url.toString());
         getWebDriverWait().until(ExpectedConditions.jsReturnsValue("return document.readyState=='complete';"));
     }
 
@@ -88,31 +88,19 @@ public class BasePage {
 
     public void selectButtonByText(WebElement button, String buttonText) {
         assertTrue("Button is not clickable: " + button.getTagName(), isClickable(button));
-        assertEquals("Button text is incorrect:" + buttonText, button.getText(), buttonText);
+        assertEquals("Button text is incorrect:" + buttonText, buttonText, button.getAttribute("value"));
         button.click();
     }
 
-    public void selectRadioButtonByValue(WebElement radioGroup, String valueToSelect) {
-        List<WebElement> radioLabels = radioGroup.findElements(By.tagName(""));
-        String trim = StringUtils.trimWhitespace(valueToSelect);
-        for (WebElement radioLabel : radioLabels) {
-            if (StringUtils.trimWhitespace(radioLabel.getText()).equalsIgnoreCase(trim)) {
-                radioLabel.click();
-                break;
-            }
-        }
-    }
-
     public void selectItemInDropDown(WebElement dropDownElement, String itemToSelect) {
-        List<WebElement> options = dropDownElement.findElements(By.tagName("li"));
-        for (WebElement option : options) {
-            if (option.getText().contains(itemToSelect)) {
-                option.click();
-                break;
-            } else {
-                Assert.fail("No items in dropdown exist that match: " + itemToSelect);
-            }
-        }
+        Select select = new Select(dropDownElement);
+        List<WebElement> allOptions = select.getOptions();
+        List<WebElement> match =
+                allOptions.stream().filter(o -> o.getText().equals(itemToSelect)).collect(
+                        Collectors.toList());
+        assertFalse(String.format("There was no %s option in the dropdown.", itemToSelect), match.isEmpty());
+        assertEquals("There was more than one option to select in the dropdown.", match.size(), 1);
+        match.get(0).click();
     }
 
 }

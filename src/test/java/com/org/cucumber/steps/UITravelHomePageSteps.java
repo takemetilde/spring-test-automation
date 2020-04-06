@@ -9,6 +9,11 @@ public class UITravelHomePageSteps {
     @Autowired
     TravelHomePage homePage;
 
+    @Given("the browser is on the Home Page")
+    public void the_browser_is_on_the_page() {
+        homePage.initializePage();
+    }
+
     @Given("^the departure city (.*?) from the dropdown is selected on the Home Page$")
     public void the_departure_city_from_the_dropdown_is_selected_on_the_home_page(String depCity) {
         homePage.selectItemInDropDown(homePage.getDepartureCityDropDown(), depCity);
