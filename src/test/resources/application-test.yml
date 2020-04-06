@@ -3,6 +3,6 @@ spring:
 ui:
   webdriver:
     type: chrome
-    version: 75.0.3770.140
+    version: auto
 
 api:
