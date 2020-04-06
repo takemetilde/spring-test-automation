@@ -4,7 +4,7 @@
     <list default="true" id="1e67d282-4418-4b75-b9d6-cf6d35efe290" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UITest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UITest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/TravelHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/TravelHomePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +181,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/org/ui/pageobjects/impl/BasePage.java</url>
-          <line>98</line>
+          <line>92</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
