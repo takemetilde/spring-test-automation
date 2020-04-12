@@ -20,21 +20,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 @DirtiesContext
 public class CucumberSpringContext {
 
-    @Autowired
-    WebDriver webDriver;
-
     private Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Before
     public void beforeUI() {
         logger.info("Starting Cucumber in Spring context...");
-        webDriver.manage().window().maximize();
-    }
 
-    @After
-    public void afterUI() {
-        logger.info("Quitting current webdriver...");
-        webDriver.quit();
     }
 
 }
