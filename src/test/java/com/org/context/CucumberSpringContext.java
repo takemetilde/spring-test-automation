@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {
-//        UIIntegrationTestContext.class,
+        UIIntegrationTestContext.class,
         APIIntegrationTestContext.class},
         initializers = ConfigFileApplicationContextInitializer.class)
 @ActiveProfiles("test")
