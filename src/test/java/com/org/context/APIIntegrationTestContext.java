@@ -1,9 +1,9 @@
 package com.org.context;
 
+import com.org.config.RestClientConfig;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.test.context.ContextConfiguration;
 
-@ContextConfiguration
-@ComponentScan(basePackages = "com.org.api.rest.impl")
+@ComponentScan(basePackages = "com.org.api.rest.impl", basePackageClasses = RestClientConfig.class)
 public class APIIntegrationTestContext {
+
 }

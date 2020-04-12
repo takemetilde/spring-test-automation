@@ -1,4 +1,4 @@
-package com.org.cucumber.steps;
+package com.org.cucumber.steps.ui;
 
 import com.org.ui.pageobjects.impl.TravelHomePage;
 import io.cucumber.java.en.Given;
