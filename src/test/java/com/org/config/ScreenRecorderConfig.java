@@ -7,6 +7,8 @@ import org.monte.media.math.Rational;
 import org.monte.screenrecorder.ScreenRecorder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import java.awt.*;
 import java.io.IOException;
@@ -14,6 +16,7 @@ import java.io.IOException;
 import static org.monte.media.FormatKeys.*;
 import static org.monte.media.VideoFormatKeys.*;
 
+@Configuration
 public class ScreenRecorderConfig {
 
     Format aviFileFormat = new Format(MediaTypeKey, FormatKeys.MediaType.FILE,
@@ -25,8 +28,8 @@ public class ScreenRecorderConfig {
                     CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
                     DepthKey, 24,
                     FrameRateKey, Rational.valueOf(30),
-                    QualityKey, 1.0f,
-                    KeyFrameIntervalKey, 5 * 60);
+                    QualityKey, 2.0f);
+//                    KeyFrameIntervalKey, 60 * 60);
 
     Format aviMouseFormat = new Format(MediaTypeKey, MediaType.VIDEO,
             EncodingKey, "black",
@@ -34,16 +37,13 @@ public class ScreenRecorderConfig {
 
     private Logger logger = LoggerFactory.getLogger(getClass().getName());
 
-    public ScreenRecorderConfig() {
-
-    }
-
+    @Bean
     public ScreenRecorder screenRecorder() {
         logger.info("Creating screen recorder...");
         ScreenRecorder screenRecorder;
         try {
             screenRecorder =
-                    new ScreenRecorder(getDefaultGraphicsConfig(), aviFileFormat, aviScreenFormat, aviMouseFormat, null);
+                    new ScreenRecorder(getDefaultGraphicsConfig(), aviFileFormat, aviScreenFormat, null, null);
             return screenRecorder;
         } catch (IOException | AWTException e) {
             Assert.fail("Recorder not set up.");

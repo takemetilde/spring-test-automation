@@ -21,9 +21,8 @@ public class UIIntegrationTestContext {
     @Autowired
     WebDriver webDriver;
 
-    ScreenRecorderConfig screenRecorderConfig = new ScreenRecorderConfig();
-
-    ScreenRecorder screenRecorder = screenRecorderConfig.screenRecorder();
+    @Autowired
+    ScreenRecorder screenRecorder;
 
     private Logger logger = LoggerFactory.getLogger(getClass().getName());
 
