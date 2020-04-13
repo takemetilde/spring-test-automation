@@ -3,6 +3,7 @@ package com.org.cucumber.steps.api;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -16,10 +17,6 @@ import static org.junit.Assert.assertEquals;
 
 public class APIBaseSteps {
 
-    private static final String baseURL = "https://jsonplaceholder.typicode.com";
-
-    private static URI baseURI = checkURI(baseURL);
-
     protected Response response;
 
     @Autowired
@@ -27,6 +24,9 @@ public class APIBaseSteps {
 
     @Autowired
     protected Map<String, String> requestHeaders;
+
+    @Value("${api.baseUrl}")
+    private String baseUrlConfig;
 
     public static URI checkURI(String uri) {
         URI returnURI = null;
@@ -38,12 +38,16 @@ public class APIBaseSteps {
         return returnURI;
     }
 
+    public URI baseURL() {
+        return checkURI(baseUrlConfig);
+    }
+
     public Response getPost(int id) {
         return given()
                 .spec(requestSpecBuilder.build())
                 .pathParam("id", id)
                 .when()
-                .get(baseURI.toString() + "/posts/{id}");
+                .get(baseURL() + "/posts/{id}");
     }
 
     public void assertObjectsEqual(Object expected, Object actual) {

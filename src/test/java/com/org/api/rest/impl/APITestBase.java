@@ -1,6 +1,6 @@
 package com.org.api.rest.impl;
 
-import com.org.context.APIIntegrationTestContext;
+import com.org.api.APIIntegrationTestContext;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
