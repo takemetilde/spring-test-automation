@@ -5,9 +5,9 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"classpath:features/ui"},
-        glue = {"com.org.cucumber", "com.org.context.ui"},
+@CucumberOptions(features = {"classpath:features/api"},
+        glue = {"com.org.cucumber", "com.org.context.api"},
         plugin = {"pretty", "json:target/cucumber-report.json"})
-public class CucumberRunnerUIIntegrationTest {
+public class CucumberRunnerAPIIntegrationTest {
 
 }

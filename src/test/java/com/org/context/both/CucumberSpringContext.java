@@ -1,4 +1,4 @@
-package com.org.context;
+package com.org.context.both;
 
 import com.org.api.APIIntegrationTestContext;
 import com.org.ui.UIIntegrationTestContext;
