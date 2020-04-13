@@ -16,16 +16,20 @@ import static org.monte.media.VideoFormatKeys.*;
 
 public class ScreenRecorderConfig {
 
-    Format aviFileFormat = new Format(MediaTypeKey, FormatKeys.MediaType.FILE, MimeTypeKey, MIME_AVI);
+    Format aviFileFormat = new Format(MediaTypeKey, FormatKeys.MediaType.FILE,
+            MimeTypeKey, MIME_AVI);
 
     Format aviScreenFormat =
-            new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+            new Format(MediaTypeKey, MediaType.VIDEO,
+                    EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
                     CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
-                    DepthKey, 24, FrameRateKey, Rational.valueOf(15),
+                    DepthKey, 24,
+                    FrameRateKey, Rational.valueOf(30),
                     QualityKey, 1.0f,
-                    KeyFrameIntervalKey, 15 * 60);
+                    KeyFrameIntervalKey, 5 * 60);
 
-    Format aviMouseFormat = new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, "black",
+    Format aviMouseFormat = new Format(MediaTypeKey, MediaType.VIDEO,
+            EncodingKey, "black",
             FrameRateKey, Rational.valueOf(30));
 
     private Logger logger = LoggerFactory.getLogger(getClass().getName());
@@ -39,7 +43,7 @@ public class ScreenRecorderConfig {
         ScreenRecorder screenRecorder;
         try {
             screenRecorder =
-                    new ScreenRecorder(getDefaultGraphicsConfig());
+                    new ScreenRecorder(getDefaultGraphicsConfig(), aviFileFormat, aviScreenFormat, aviMouseFormat, null);
             return screenRecorder;
         } catch (IOException | AWTException e) {
             Assert.fail("Recorder not set up.");
