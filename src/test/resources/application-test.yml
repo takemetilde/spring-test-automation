@@ -6,3 +6,4 @@ ui:
     version: auto
 
 api:
+  baseUrl: https://jsonplaceholder.typicode.com
