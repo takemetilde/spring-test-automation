@@ -1,4 +1,4 @@
-package com.org.cucumber;
+package com.org.cucumber.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -8,6 +8,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = {"classpath:features"},
         glue = {"com.org.cucumber", "com.org.context"},
         plugin = {"pretty", "json:target/cucumber-report.json"})
-public class CucumberRunnerIntegrationTest {
+public class CucumberRunnerUIIntegrationTest {
 
 }

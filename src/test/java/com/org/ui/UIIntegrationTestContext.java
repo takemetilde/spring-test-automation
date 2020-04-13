@@ -1,4 +1,4 @@
-package com.org.context;
+package com.org.ui;
 
 import com.org.config.WebDriverConfig;
 import org.openqa.selenium.WebDriver;
