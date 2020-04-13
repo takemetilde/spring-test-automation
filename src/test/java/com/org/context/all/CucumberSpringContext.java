@@ -21,7 +21,7 @@ public class CucumberSpringContext {
     private Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Before
-    public void beforeUI() {
+    public void before() {
         logger.info("Starting Cucumber in Spring context...");
 
     }
