@@ -70,5 +70,10 @@
             <artifactId>monte-repack</artifactId>
             <version>1.0.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.hierynomus</groupId>
+            <artifactId>sshj</artifactId>
+            <version>0.27.0</version>
+        </dependency>
     </dependencies>
 </project>
