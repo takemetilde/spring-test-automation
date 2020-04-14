@@ -4,6 +4,6 @@ ui:
   webdriver:
     type: chrome
     version: auto
-
+    record: true
 api:
   baseUrl: https://jsonplaceholder.typicode.com
