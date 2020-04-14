@@ -65,5 +65,10 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.hierynomus</groupId>
+            <artifactId>sshj</artifactId>
+            <version>0.27.0</version>
+        </dependency>
     </dependencies>
 </project>
