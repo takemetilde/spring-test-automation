@@ -2,13 +2,17 @@ package com.org.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.util.FileCopyUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-public class CommandLineInteractor {
+import static org.junit.Assert.assertEquals;
+
+@Component
+public class CommandLineProcess {
 
     private Logger logger = LoggerFactory.getLogger(getClass().getName());
 
@@ -16,37 +20,27 @@ public class CommandLineInteractor {
         return new String(FileCopyUtils.copyToByteArray(is), StandardCharsets.UTF_8);
     }
 
-    public String execute(String command, boolean waitForResponse) {
+    public String execute(String command) {
 
         String response = "";
 
         ProcessBuilder pb = new ProcessBuilder("bash", "-c", command);
         pb.redirectErrorStream(true);
 
-        logger.info("Linux command: " + command);
+        logger.info("Executing command: " + pb.command());
 
         try {
-            Process shell = pb.start();
-            if (waitForResponse) {
-                InputStream shellIn = shell.getInputStream();
-                int shellExitStatus = shell.waitFor();
-                System.out.println("Exit status: " + shellExitStatus);
-                response = convertStreamToString(shellIn);
-                shellIn.close();
-            }
+            Process bash = pb.start();
+            InputStream shellIn = bash.getInputStream();
+            int shellExitStatus = bash.waitFor();
+            assertEquals(0, shellExitStatus);
+            response = convertStreamToString(shellIn);
+            shellIn.close();
         } catch (IOException | InterruptedException e) {
-            System.out.println("Error occurred while executing Linux command. Error Description: "
+            System.out.println("Error occurred while executing command: "
                     + e.getMessage());
         }
         return response;
-    }
-
-    public void openBash() {
-
-    }
-
-    public void closeBase() {
-
     }
 
 }
