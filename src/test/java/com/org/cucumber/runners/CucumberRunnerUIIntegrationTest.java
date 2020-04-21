@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"classpath:features/ui"},
         glue = {"com.org.cucumber", "com.org.context.ui"},
-        plugin = {"pretty", "json:target/cucumber-report.json"})
+        plugin = {"pretty", "json:target/cucumber/cucumber-report.json","html:target/cucumber/htmlReports",})
 public class CucumberRunnerUIIntegrationTest {
 
 }

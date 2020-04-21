@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
+//@RunWith(SpringRunner.class)
 @Import(CommandLineProcess.class)
 public class CLITest {
 
     @Autowired
     CommandLineProcess cli;
 
-    @Test
+//    @Test
     public void cliTest() {
         System.out.println(cli.execute("ls"));
         System.out.println(cli.execute("cd .."));
