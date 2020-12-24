@@ -1,6 +1,6 @@
 package com.org.cucumber.datatables;
 
-import com.org.api.rest.model.Posts;
+import com.org.api.model.Posts;
 import io.cucumber.java.DataTableType;
 
 import java.util.Map;

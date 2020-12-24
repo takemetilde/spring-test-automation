@@ -1,4 +1,4 @@
-package com.org.api.rest.model;
+package com.org.api.model;
 
 public class Posts {
 

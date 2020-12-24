@@ -1,6 +1,6 @@
 package com.org.cucumber.steps.api;
 
-import com.org.api.rest.model.Posts;
+import com.org.api.model.Posts;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

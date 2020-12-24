@@ -1,4 +1,4 @@
-package com.org.api.rest.impl;
+package com.org.api.impl;
 
 import com.org.api.APIIntegrationTestContext;
 import io.restassured.builder.RequestSpecBuilder;
