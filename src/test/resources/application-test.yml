@@ -1,9 +1,4 @@
 spring:
   profiles: test
-ui:
-  webdriver:
-    type: chrome
-    version: auto
-
 api:
   baseUrl: https://jsonplaceholder.typicode.com

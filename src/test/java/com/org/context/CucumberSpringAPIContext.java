@@ -1,4 +1,4 @@
-package com.org.context.api;
+package com.org.context;
 
 import com.org.api.APIIntegrationTestContext;
 import io.cucumber.java.Before;
