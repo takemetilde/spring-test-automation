@@ -1,4 +1,4 @@
-package com.org.cucumber.steps.api;
+package com.org.cucumber.steps;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.samePropertyValuesAs;
 import static org.junit.Assert.assertEquals;
 
-public class APIBaseSteps {
+public class BaseSteps {
 
     protected Response response;
 

@@ -1,4 +1,4 @@
-package com.org.api.model;
+package com.org.model;
 
 public class Posts {
 

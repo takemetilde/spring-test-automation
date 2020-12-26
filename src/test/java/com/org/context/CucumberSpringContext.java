@@ -1,6 +1,6 @@
 package com.org.context;
 
-import com.org.api.APIIntegrationTestContext;
+import com.org.IntegrationTestContext;
 import io.cucumber.java.Before;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,11 +10,11 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 
 @ContextConfiguration(classes = {
-        APIIntegrationTestContext.class},
+        IntegrationTestContext.class},
         initializers = ConfigFileApplicationContextInitializer.class)
 @ActiveProfiles("test")
 @DirtiesContext
-public class CucumberSpringAPIContext {
+public class CucumberSpringContext {
 
     private Logger logger = LoggerFactory.getLogger(getClass().getName());
 

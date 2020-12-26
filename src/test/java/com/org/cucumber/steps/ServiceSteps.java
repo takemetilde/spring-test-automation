@@ -1,6 +1,6 @@
-package com.org.cucumber.steps.api;
+package com.org.cucumber.steps;
 
-import com.org.api.model.Posts;
+import com.org.model.Posts;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,7 +9,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class ServiceSteps extends APIBaseSteps {
+public class ServiceSteps extends BaseSteps {
 
     @When("^the client gets the post: (.*)$")
     public void the_client_gets_the_post(String id) {
