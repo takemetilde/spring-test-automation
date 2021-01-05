@@ -1,10 +1,10 @@
 Feature: Book travel on Blazedemo
 
   Scenario: Sequential Execution, Open BlazeDemo site
-    Given Open http://www.blazedemo.com/
+    Given Open https://www.blazedemo.com/
 
   Scenario: Select departure/destination city from the Home Page
-    Given Open http://www.blazedemo.com/
+    Given Open https://www.blazedemo.com/
     And the browser is on the Home Page
     And the departure city Paris from the dropdown is selected on the Home Page
     And the destination city Buenos Aires from the dropdown is selected on the Home Page
