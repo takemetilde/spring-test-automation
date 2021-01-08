@@ -1,3 +1,4 @@
+@Test1
 Feature: Query JsonPlaceholder API
 
   Scenario: Sequential Execution, Check JsonPlaceholder API
