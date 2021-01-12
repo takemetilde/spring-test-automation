@@ -16,7 +16,7 @@ public class PostsDataTableTransformer {
     private final String BODY = "body";
 
     @DataTableType
-    public Posts definePosts(Map<String, String> entry) {
+    public Posts postsEntry(Map<String, String> entry) {
         int userId = Integer.parseInt(entry.get(USER_ID));
         int id = Integer.parseInt(entry.get(ID));
         String title = entry.get(TITLE);

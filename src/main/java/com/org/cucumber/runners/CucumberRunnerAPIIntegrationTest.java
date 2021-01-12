@@ -10,4 +10,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "json:target/cucumber-report.json"})
 public class CucumberRunnerAPIIntegrationTest {
 
+    public static void main(String[] args) throws Exception {
+        io.cucumber.core.cli.Main.main(args);
+    }
 }
