@@ -3,7 +3,12 @@ spring:
 ui:
   webdriver:
     type: chrome
-    version: auto
+#    version: auto
+  browser:
+    chrome:
+      version: 76
+    firefox:
+      version:
 
 api:
   baseUrl: https://jsonplaceholder.typicode.com

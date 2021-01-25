@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.event.annotation.AfterTestClass;
 import org.springframework.test.context.event.annotation.BeforeTestClass;
 
-@ComponentScan(basePackages = "com.org.ui", basePackageClasses = WebDriverConfig.class)
+@ComponentScan(basePackages = {"com.org.ui", "com.org.webdriver"}, basePackageClasses = WebDriverConfig.class)
 public class UIIntegrationTestContext {
 
     @Autowired
