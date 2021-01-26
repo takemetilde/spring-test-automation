@@ -1,4 +1,4 @@
-package com.org.db.mysql;
+package com.org.db.mysql.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

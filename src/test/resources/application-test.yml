@@ -1,9 +1,6 @@
-spring:
-  profiles: test
 ui:
   webdriver:
     type: chrome
-#    version: auto
   browser:
     chrome:
       version: 76
@@ -11,4 +8,11 @@ ui:
       version:
 api:
   baseUrl: https://jsonplaceholder.typicode.com
+db:
+  mysql:
+    driver: com.mysql.cj.jdbc.Driver
+    testdb:
+      url: jdbc:mysql://localhost:3306/testdb
+      username: test
+      password: 1987ofb
 
