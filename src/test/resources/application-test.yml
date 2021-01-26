@@ -1,5 +1,10 @@
 spring:
   profiles: test
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/testdb
+    username: test
+    password: 1987ofb
 ui:
   webdriver:
     type: chrome
@@ -9,6 +14,6 @@ ui:
       version: 76
     firefox:
       version:
-
 api:
   baseUrl: https://jsonplaceholder.typicode.com
+
