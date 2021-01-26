@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.Optional;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {UserRepository.class, Config.class, UserDataService.class})
+@SpringBootTest(classes = {UserRepository.class, MySqlConfig.class, UserDataService.class})
 @EnableJpaRepositories
 @EntityScan(basePackageClasses = User.class)
 @AutoConfigureTestEntityManager
