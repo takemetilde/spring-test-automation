@@ -15,4 +15,13 @@ db:
       url: jdbc:mysql://localhost:3306/testdb
       username: test
       password: 1987ofb
+  mongodb:
+    testdb:
+      host: 127.0.0.1
+      port: 27017
+      database: testdb
+    testdb2:
+      host: 127.0.0.1
+      port: 27017
+      database: testdb2
 

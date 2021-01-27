@@ -16,7 +16,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackageClasses = PersonDataService.class)
+@ComponentScan(basePackageClasses = PersonJpaDataService.class)
 @EnableJpaRepositories(
         entityManagerFactoryRef = "personEntityManagerFactory",
         transactionManagerRef = "personTransactionManager"

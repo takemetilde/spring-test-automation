@@ -1,4 +1,4 @@
-package com.org.db.mongo.user;
+package com.org.db.mongo.person;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoCredential;
@@ -14,22 +14,22 @@ import org.springframework.data.mongodb.core.SimpleMongoClientDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Configuration
-@ComponentScan(basePackageClasses = {UserMongoDataService.class, UserMongoRepository.class})
-@EnableMongoRepositories( mongoTemplateRef = "userMongoTemplate")
+@ComponentScan(basePackageClasses = {PersonMongoDataService.class, PersonMongoRepository.class})
+@EnableMongoRepositories(mongoTemplateRef = "personMongoTemplate")
 @AutoConfigureDataMongo
-public class UserMongoConfig {
+public class PersonMongoConfig  {
 
-    @Bean(name = "userMongoTemplate")
-    MongoTemplate userMongoTemplate(@Qualifier("userMongoDbFactory") MongoDbFactory mongoDbFactory) {
-        MongoTemplate mongoTemplate = new MongoTemplate(mongoDbFactory);
+    @Bean(name = "personMongoTemplate")
+    MongoTemplate personMongoTemplate(@Qualifier("personMongoDbFactory") MongoDbFactory mongoDbFactory) {
+        MongoTemplate mongoTemplate = new MongoTemplate(mongoDbFactory );
         return mongoTemplate;
     }
 
-    @Bean( name = "userMongoDbFactory")
-    public MongoDbFactory userMongoDbFactory() {
+    @Bean( name = "personMongoDbFactory")
+    public MongoDbFactory personMongoDbFactory() {
         MongoCredential mongoCredential = MongoCredential.createCredential("root", "admin", "example".toCharArray());
         return new SimpleMongoClientDbFactory(
-                MongoClients.create(new ConnectionString("mongodb://127.0.0.1:27017")), "testdb"
+                MongoClients.create(new ConnectionString("mongodb://127.0.0.1:27017")), "testdb2"
         );
     }
 
