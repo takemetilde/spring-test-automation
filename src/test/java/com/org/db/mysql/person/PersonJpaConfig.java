@@ -1,7 +1,5 @@
 package com.org.db.mysql.person;
 
-import com.org.db.mysql.user.User;
-import com.org.db.mysql.user.UserDataService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
@@ -24,7 +22,7 @@ import javax.sql.DataSource;
         transactionManagerRef = "personTransactionManager"
 )
 @AutoConfigureDataJpa
-public class PersonConfig {
+public class PersonJpaConfig {
 
     @Bean(name = "testdb2DataSource")
     public DataSource dataSource() {

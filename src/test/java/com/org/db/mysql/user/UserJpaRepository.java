@@ -2,6 +2,6 @@ package com.org.db.mysql.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface UserJpaRepository extends JpaRepository<UserJpa, Integer> {
 
 }

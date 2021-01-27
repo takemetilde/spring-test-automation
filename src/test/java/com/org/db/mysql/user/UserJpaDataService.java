@@ -6,12 +6,12 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class UserDataService {
+public class UserJpaDataService {
 
     @Autowired
-    UserRepository repository;
+    UserJpaRepository repository;
 
-    public Optional<User> findById(int id) {
+    public Optional<UserJpa> findById(int id) {
         return repository.findById(id);
     }
 }

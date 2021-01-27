@@ -12,19 +12,18 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackageClasses = UserDataService.class)
+@ComponentScan(basePackageClasses = UserJpaDataService.class)
 @EnableJpaRepositories(
         entityManagerFactoryRef = "userEntityManagerFactory",
         transactionManagerRef = "userTransactionManager"
 )
 @AutoConfigureDataJpa
-public class UserConfig {
+public class UserJpaConfig {
 
     @Primary
     @Bean(name = "testdbDataSource")
@@ -44,7 +43,7 @@ public class UserConfig {
 
         return builder
                 .dataSource(dataSource)
-                .packages(User.class)
+                .packages(UserJpa.class)
                 .persistenceUnit("user")
                 .build();
     }
