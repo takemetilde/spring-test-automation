@@ -1,14 +1,27 @@
-spring:
-  profiles: test
 ui:
   webdriver:
     type: chrome
-#    version: auto
   browser:
     chrome:
       version: 76
     firefox:
       version:
-
 api:
   baseUrl: https://jsonplaceholder.typicode.com
+db:
+  mysql:
+    driver: com.mysql.cj.jdbc.Driver
+    testdb:
+      url: jdbc:mysql://localhost:3306/testdb
+      username: test
+      password: 1987ofb
+  mongodb:
+    testdb:
+      host: 127.0.0.1
+      port: 27017
+      database: testdb
+    testdb2:
+      host: 127.0.0.1
+      port: 27017
+      database: testdb2
+
