@@ -1,6 +1,7 @@
 package com.org.db.mongo.user;
 
 import com.mongodb.ConnectionString;
+import com.mongodb.MongoClientSettings;
 import com.mongodb.MongoCredential;
 import com.mongodb.client.MongoClients;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -27,10 +28,14 @@ public class UserMongoConfig {
 
     @Bean( name = "userMongoDbFactory")
     public MongoDbFactory userMongoDbFactory() {
-        MongoCredential mongoCredential = MongoCredential.createCredential("root", "admin", "example".toCharArray());
-        return new SimpleMongoClientDbFactory(
-                MongoClients.create(new ConnectionString("mongodb://127.0.0.1:27017")), "testdb"
-        );
+        MongoCredential mongoCredential = MongoCredential.createCredential("test", "admin", "1987ofb".toCharArray());
+        MongoClientSettings settings = MongoClientSettings
+                .builder()
+                .applyConnectionString(new ConnectionString("mongodb://127.0.0.1:27017"))
+                .credential(mongoCredential)
+                .build();
+
+        return new SimpleMongoClientDbFactory( MongoClients.create(settings), "testdb" );
     }
 
 }
