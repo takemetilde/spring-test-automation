@@ -17,11 +17,13 @@ db:
       password: 1987ofb
   mongodb:
     testdb:
-      host: 127.0.0.1
-      port: 27017
+      url: mongodb://127.0.0.1:27017
       database: testdb
+      username: test
+      password: 1987ofb
     testdb2:
-      host: 127.0.0.1
-      port: 27017
+      url: mongodb://127.0.0.1:27017
       database: testdb2
+      username: test
+      password: 1987ofb
 
