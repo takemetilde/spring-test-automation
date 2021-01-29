@@ -14,6 +14,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import java.util.HashMap;
+import java.util.Map;
 
 @Configuration
 @ComponentScan(basePackageClasses = PersonJpaDataService.class)
@@ -42,7 +44,17 @@ public class PersonJpaConfig {
                 .dataSource(dataSource)
                 .packages(Person.class)
                 .persistenceUnit("person")
+                .properties(additionalJpaProperties())
                 .build();
+    }
+
+    Map<String,?> additionalJpaProperties() {
+        Map<String, String> map = new HashMap<>();
+
+        map.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        map.put("hibernate.show_sql", "true");
+
+        return map;
     }
 
     @Bean(name = "personTransactionManager")

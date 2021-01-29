@@ -43,8 +43,8 @@ public class RepoTest {
 
     @Test
     public void testJpa() {
-        Optional<UserJpa> user = userDataService.findById(1);
-        System.out.println(user.get().getName());
+//        Optional<UserJpa> user = userDataService.findById(1);
+//        System.out.println(user.get().getName());
 
         Optional<Person> person = personDataService.findById(2);
         System.out.println(person.get().getName());

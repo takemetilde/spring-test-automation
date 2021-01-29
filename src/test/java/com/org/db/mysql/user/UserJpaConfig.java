@@ -15,6 +15,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import java.util.HashMap;
+import java.util.Map;
 
 @Configuration
 @ComponentScan(basePackageClasses = UserJpaDataService.class)
@@ -36,7 +38,6 @@ public class UserJpaConfig {
                 .build();
     }
 
-    @Primary
     @Bean(name = "userEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(
             EntityManagerFactoryBuilder builder, @Qualifier("testdbDataSource") DataSource dataSource) {
@@ -45,10 +46,20 @@ public class UserJpaConfig {
                 .dataSource(dataSource)
                 .packages(UserJpa.class)
                 .persistenceUnit("user")
+                .properties(additionalJpaProperties())
                 .build();
     }
 
-    @Primary
+
+    Map<String,?> additionalJpaProperties() {
+        Map<String, String> map = new HashMap<>();
+
+        map.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        map.put("hibernate.show_sql", "true");
+
+        return map;
+    }
+
     @Bean(name = "userTransactionManager")
     public PlatformTransactionManager transactionManager(
             @Qualifier("userEntityManagerFactory") EntityManagerFactory userEntityManagerFactory) {
